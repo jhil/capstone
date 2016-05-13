@@ -17,7 +17,7 @@
     margin-bottom: .5rem;
     position: relative;
     &.toc-section {
-        opacity: 1;
+      opacity: 1;
     }
     &:before {
       color: gray;
@@ -38,7 +38,7 @@ header {
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  }
+  
   h1, span {
     position: relative;
     z-index: 2;
