@@ -1,11 +1,11 @@
 meta:
-  title: ""
-  description: ""
-  facebook_image: ""  # /img/facebook.png
-  twitter_image: ""  # /img/twitter.png
-  image: ""  # /img/share.png
-  twitter_handle: ""  # @minimill_co
-  domain: ""  # minimill.co
-  url: ""  # https://minimill.co
+  title: "Design For All - Jeff Hilnbrand"
+  description: "Jeff Hilnbrand's capstone project for Individual Studies Program."
+  facebook_image: "/img/jeff.jpg"  # /img/facebook.png
+  twitter_image: "/img/jeff.jpg"  # /img/twitter.png
+  image: "/img/jeff.jpg"  # /img/share.png
+  twitter_handle: "@jhilmd"  # @minimill_co
+  domain: "jhil.co/capstone"  # minimill.co
+  url: "jhil.co/capstone"  # https://minimill.co
   google_analytics_id: "" # UA-66637918-1
-  theme_color: "" # #FFFFFF
+  theme_color: "#F7F77C" # #FFFFFF

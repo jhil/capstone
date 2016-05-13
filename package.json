@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "capstone",
   "version": "0.0.1",
-  "description": "",
+  "description": "Jeff Hilnbrand's capstone project for Individual Studies Program.",
   "license": "MIT",
   "scripts": {},
   "dependencies": {},

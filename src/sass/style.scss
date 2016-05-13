@@ -5,3 +5,98 @@
 @import 'base';
 @import 'layout';
 @import 'responsive';
+
+.toc {
+  width: 69rem;
+  margin: 6rem auto;
+  li {
+    @extend .mono;
+    margin-left: 6rem;
+    margin-bottom: .5rem;
+    position: relative;
+    &:before {
+      color: gray;
+      content: attr(data-toc);
+      position: absolute;
+      @extend .mono;
+      left: -6rem;
+      width: 3rem;
+      text-align: right;
+    }
+  }
+}
+
+header {
+  padding: 2rem 6rem;
+  border-bottom: 1rem white solid;
+  width: 90%;
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+.article-wrapper {
+  margin: 6rem 2rem;
+  padding: 6rem 0;
+  &.dark {
+    background: $black;
+    color: $tan;
+  }
+}
+
+article {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+p {
+  width: 39rem;
+  margin-left: 6rem;
+}
+h2, .h2 {
+  position: relative;
+  margin-left: 6rem;
+  &:before {
+    content: attr(data-toc);
+    position: absolute;
+    @extend .mono;
+    left: -6rem;
+    top: .5rem;
+    width: 3rem;
+    text-align: right;
+  }
+}
+img {
+  width: 100%;
+  max-width: 51rem;
+  filter: grayscale(100%);
+  margin: 2rem 0;
+}
+
+.next {
+  width: 69rem;
+  margin: 6rem auto;
+  a {
+    @extend .h2;
+    color: $maroon;
+    width: 100%;
+    &:after {
+      content: "››››››››››››››››››››››››››";
+      letter-spacing: 4rem;
+      margin-left: 4rem;
+    }
+  }
+
+}
+
+.dark {
+  background: $black;
+  h1, h2, p, .mono {
+    color: $tan;
+  }
+}
+
+.light {
+  h1, h2, p, .mono {
+    color: $black;
+  }
+}
