@@ -7,8 +7,12 @@
 @import 'responsive';
 
 .toc {
+  color: $gray;
   width: 69rem;
   margin: 6rem auto;
+  a {
+    color: $black;
+  }
   li {
     @extend .mono;
     margin-left: 6rem;
@@ -28,14 +32,52 @@
 
 header {
   padding: 2rem 6rem;
-  border-bottom: 1rem white solid;
   width: 90%;
   max-width: $content-width;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  h1, span {
+    position: relative;
+    z-index: 2;
+  }
+  span {
+    float: right;
+  }
+  &:before {
+    content: '';
+    width: $content-width;
+    height: $content-width;
+    border-radius: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+  }
+  &:after {
+    content: '';
+    width: $content-width;
+    height: 1rem;
+    background: $white;
+    top: 12rem;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+.circle-yellow::before {
+  background: $yellow;
+}
+
+.circle-pink::before {
+  background: $pink;
 }
 
 .article-wrapper {
-  margin: 6rem 2rem;
+  z-index: 2;
+  position: relative;
+  // margin: 6rem 2rem;
+  margin: 6rem 0;
   padding: 6rem 0;
   &.dark {
     background: $black;
@@ -49,7 +91,7 @@ article {
 }
 
 p {
-  width: 39rem;
+  max-width: 39rem;
   margin-left: 6rem;
 }
 h2, .h2 {
@@ -65,11 +107,16 @@ h2, .h2 {
     text-align: right;
   }
 }
+
 img {
   width: 100%;
   max-width: 51rem;
   filter: grayscale(100%);
   margin: 2rem 0;
+}
+
+.full-width {
+  max-width: 100%;
 }
 
 .next {
@@ -80,7 +127,7 @@ img {
     color: $maroon;
     width: 100%;
     &:after {
-      content: "››››››››››››››››››››››››››";
+      content: "››››››››››››››››››››››››››››››››››";
       letter-spacing: 4rem;
       margin-left: 4rem;
     }
@@ -96,6 +143,7 @@ img {
 }
 
 .light {
+  background: $tan;
   h1, h2, p, .mono {
     color: $black;
   }
