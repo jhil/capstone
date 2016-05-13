@@ -7,17 +7,18 @@
 @import 'responsive';
 
 .toc {
-  color: $gray;
   width: 69rem;
-  margin: 6rem auto;
-  a {
-    color: $black;
-  }
+  padding: 6rem 0;
+  margin: 0 auto;
   li {
+    opacity: .5;
     @extend .mono;
     margin-left: 6rem;
     margin-bottom: .5rem;
     position: relative;
+    &.toc-section {
+        opacity: 1;
+    }
     &:before {
       color: gray;
       content: attr(data-toc);
@@ -50,6 +51,7 @@ header {
     height: $content-width;
     border-radius: 100%;
     left: 0;
+    top: -1rem;
     position: absolute;
     z-index: 0;
   }
@@ -73,11 +75,18 @@ header {
   background: $pink;
 }
 
+.circle-maroon::before {
+  background: $maroon;
+}
+
+.circle-gray::before {
+  background: $gray;
+}
+
 .article-wrapper {
   z-index: 2;
   position: relative;
   // margin: 6rem 2rem;
-  margin: 6rem 0;
   padding: 6rem 0;
   &.dark {
     background: $black;
@@ -105,13 +114,14 @@ h2, .h2 {
     top: .5rem;
     width: 3rem;
     text-align: right;
+    opacity: .5;
   }
 }
 
 img {
   width: 100%;
   max-width: 51rem;
-  filter: grayscale(100%);
+  filter: grayscale(65%);
   margin: 2rem 0;
 }
 
@@ -137,14 +147,14 @@ img {
 
 .dark {
   background: $black;
-  h1, h2, p, .mono {
+  h1, h2, p, .mono, .toc {
     color: $tan;
   }
 }
 
 .light {
   background: $tan;
-  h1, h2, p, .mono {
+  h1, h2, p, .mono, .toc {
     color: $black;
   }
 }
